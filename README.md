@@ -6,7 +6,8 @@ allows for nunjucks templating.
 This loads data from JSON files specified in `config.json`, as well as
 `config.json` itself.
 
-```
+```json5
+// .parcelrc
 {
   "extends": "@parcel/config-default",
   "transformers": {
