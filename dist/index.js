@@ -23,7 +23,7 @@ var $e5b6b42b2efa4b33$export$2e2bcd8739ae039 = new $17LRP$parcelplugin.Transform
         let archie = null;
         if (contents.fetch.archie.output) archie = (await config.getConfig([
             contents.fetch.archie.output
-        ])).contents;
+        ]))?.contents;
         return {
             config: contents,
             archie: archie

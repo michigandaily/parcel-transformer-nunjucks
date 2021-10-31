@@ -8,7 +8,7 @@ export default new Transformer({
     // find archie files to insert
     let archie = null;
     if (contents.fetch.archie.output) {
-      archie = (await config.getConfig([contents.fetch.archie.output])).contents;
+      archie = (await config.getConfig([contents.fetch.archie.output]))?.contents;
     }
     return {
       config: contents,
