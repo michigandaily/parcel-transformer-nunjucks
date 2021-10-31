@@ -11,7 +11,7 @@ This loads data from JSON files specified in `config.json`, as well as
 {
   "extends": "@parcel/config-default",
   "transformers": {
-      "*.html": ["parcel-transformer-nunjucks"]
+      "*.html": ["parcel-transformer-nunjucks", "..."]
   }
 }
 ```
