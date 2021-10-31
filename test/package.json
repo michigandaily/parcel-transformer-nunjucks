@@ -1,0 +1,14 @@
+{
+    "name": "parcel-transformer-nunjucks-test",
+    "version": "1.0.0",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "postinstall": "parcel build index.html --no-cache"
+    },
+    "devDependencies": {
+        "@parcel/config-default": "^2.0.0",
+        "parcel": "^2.0.0",
+        "parcel-transformer-nunjucks": "file:.."
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "@michigandaily/parcel-transformer-nunjucks",
+  "version": "1.0.0",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "engines": {
+      "parcel": "2.x"
+  },
+  "dependencies": {
+    "@parcel/plugin": "^2.0.0",
+    "nunjucks": "^3.2.3",
+    "parcel": "^2.0.0"
+  }
+}
