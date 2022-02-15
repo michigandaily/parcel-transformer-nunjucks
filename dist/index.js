@@ -1,5 +1,5 @@
-var $j4vYq$parcelplugin = require("@parcel/plugin");
-var $j4vYq$nunjucks = require("nunjucks");
+var $2E0hp$parcelplugin = require("@parcel/plugin");
+var $2E0hp$nunjucks = require("nunjucks");
 
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
@@ -10,10 +10,10 @@ function $parcel$export(e, n, v, s) {
 
 $parcel$defineInteropFlag(module.exports);
 
-$parcel$export(module.exports, "default", () => $3a3c823fbf0d9b07$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "default", () => $9fc92474a186eb2d$export$2e2bcd8739ae039);
 
 
-var $3a3c823fbf0d9b07$export$2e2bcd8739ae039 = new $j4vYq$parcelplugin.Transformer({
+var $9fc92474a186eb2d$export$2e2bcd8739ae039 = new $2E0hp$parcelplugin.Transformer({
     async loadConfig ({ config: config  }) {
         // load config file
         const { contents: contents  } = await config.getConfig([
@@ -32,16 +32,15 @@ var $3a3c823fbf0d9b07$export$2e2bcd8739ae039 = new $j4vYq$parcelplugin.Transform
         ));
         return {
             config: contents,
-            env: "production",
             archie: archie
         };
     },
     async transform ({ asset: asset , config: config  }) {
-        $j4vYq$nunjucks.configure({
+        $2E0hp$nunjucks.configure({
             autoescape: false
         });
         let code = await asset.getCode();
-        let result = $j4vYq$nunjucks.renderString(code, config);
+        let result = $2E0hp$nunjucks.renderString(code, config);
         asset.setCode(result);
         return [
             asset
