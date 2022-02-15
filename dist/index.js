@@ -1,5 +1,5 @@
-var $17LRP$parcelplugin = require("@parcel/plugin");
-var $17LRP$nunjucks = require("nunjucks");
+var $j4vYq$parcelplugin = require("@parcel/plugin");
+var $j4vYq$nunjucks = require("nunjucks");
 
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
@@ -10,10 +10,10 @@ function $parcel$export(e, n, v, s) {
 
 $parcel$defineInteropFlag(module.exports);
 
-$parcel$export(module.exports, "default", () => $e5b6b42b2efa4b33$export$2e2bcd8739ae039);
+$parcel$export(module.exports, "default", () => $3a3c823fbf0d9b07$export$2e2bcd8739ae039);
 
 
-var $e5b6b42b2efa4b33$export$2e2bcd8739ae039 = new $17LRP$parcelplugin.Transformer({
+var $3a3c823fbf0d9b07$export$2e2bcd8739ae039 = new $j4vYq$parcelplugin.Transformer({
     async loadConfig ({ config: config  }) {
         // load config file
         const { contents: contents  } = await config.getConfig([
@@ -21,20 +21,26 @@ var $e5b6b42b2efa4b33$export$2e2bcd8739ae039 = new $17LRP$parcelplugin.Transform
         ]);
         // find archie files to insert
         let archie = null;
-        if (contents.fetch.archie.output) archie = (await config.getConfig([
-            contents.fetch.archie.output
+        const confaml = contents.fetch.filter((d)=>!d.hasOwnProperty("sheetId")
+        );
+        if (confaml.length === 1) archie = (await config.getConfig([
+            confaml[0].output
         ]))?.contents;
+        else if (confaml.length > 1) archie = await Promise.all(confaml.map(async (aml)=>(await config.getConfig([
+                aml.output
+            ]))?.contents
+        ));
         return {
             config: contents,
             archie: archie
         };
     },
     async transform ({ asset: asset , config: config  }) {
-        $17LRP$nunjucks.configure({
+        $j4vYq$nunjucks.configure({
             autoescape: false
         });
         let code = await asset.getCode();
-        let result = $17LRP$nunjucks.renderString(code, config);
+        let result = $j4vYq$nunjucks.renderString(code, config);
         asset.setCode(result);
         return [
             asset

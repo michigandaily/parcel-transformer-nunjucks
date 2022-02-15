@@ -4,11 +4,11 @@
   "byline": "Firstname Lastname",
   "source": "Source: This is the source",
   "deployment": "https://datagraphics.michigandaily.com",
-  "fetch": {
-    "archie": {
+  "fetch": [
+    {
       "id": "fake-id",
       "output": "./copy.json",
       "auth": "./auth.json"
     }
-  }
+  ]
 }

@@ -7,9 +7,14 @@ export default new Transformer({
     const { contents } = await config.getConfig(["config.json"]);
     // find archie files to insert
     let archie = null;
-    if (contents.fetch.archie.output) {
-      archie = (await config.getConfig([contents.fetch.archie.output]))?.contents;
+    const confaml = contents.fetch.filter(d => !d.hasOwnProperty("sheetId"));
+    if (confaml.length === 1) {
+      archie = (await config.getConfig([confaml[0].output]))?.contents;
     }
+    else if (confaml.length > 1) {
+      archie = await Promise.all(confaml.map(async aml => (await config.getConfig([aml.output]))?.contents));
+    }
+
     return {
       config: contents,
       archie,
