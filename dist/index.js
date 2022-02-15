@@ -32,6 +32,7 @@ var $3a3c823fbf0d9b07$export$2e2bcd8739ae039 = new $j4vYq$parcelplugin.Transform
         ));
         return {
             config: contents,
+            env: "production",
             archie: archie
         };
     },
