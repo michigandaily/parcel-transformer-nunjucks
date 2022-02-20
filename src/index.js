@@ -17,6 +17,7 @@ export default new Transformer({
 
     return {
       config: contents,
+      env: process.env.NODE_ENV,
       archie,
     };
   },
