@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=16",
+    "parcel": "2.x"
   },
   "dependencies": {
     "@parcel/plugin": "^2.3.2",
