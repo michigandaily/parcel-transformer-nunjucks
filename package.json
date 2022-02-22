@@ -9,6 +9,7 @@
     "parcel": "2.x"
   },
   "dependencies": {
+    "@parcel/core": "^2.3.2",
     "@parcel/plugin": "^2.3.2",
     "nunjucks": "^3.2.3",
     "parcel": "^2.3.2"
