@@ -7,9 +7,9 @@
         "postinstall": "parcel build index.html --no-cache"
     },
     "devDependencies": {
-        "@parcel/config-default": "^2.3.2",
-        "@parcel/core": "^2.3.2",
-        "parcel": "^2.3.2",
+        "@parcel/config-default": "^2.4.0",
+        "@parcel/core": "^2.4.0",
+        "parcel": "^2.4.0",
         "parcel-transformer-nunjucks": "file:.."
     }
 }
