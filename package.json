@@ -1,6 +1,6 @@
 {
   "name": "@michigandaily/parcel-transformer-nunjucks",
-  "repository": "https://github.com/MichiganDaily/parcel-transformer-nunjucks"
+  "repository": "https://github.com/MichiganDaily/parcel-transformer-nunjucks",
   "version": "1.0.0",
   "source": "src/index.js",
   "main": "dist/index.js",
