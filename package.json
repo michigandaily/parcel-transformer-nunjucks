@@ -2,6 +2,12 @@
   "name": "@michigandaily/parcel-transformer-nunjucks",
   "repository": "https://github.com/MichiganDaily/parcel-transformer-nunjucks",
   "version": "1.0.0",
+  "author": {
+    "name": "Naitian Zhou"
+  },
+  "contributors": [{
+    "name": "Eric Lau"
+  }],
   "source": "src/index.js",
   "main": "dist/index.js",
   "license": "MIT",
@@ -10,9 +16,9 @@
     "parcel": "2.x"
   },
   "dependencies": {
-    "@parcel/core": "^2.4.0",
-    "@parcel/plugin": "^2.4.0",
+    "@parcel/core": "^2.4.1",
+    "@parcel/plugin": "^2.4.1",
     "nunjucks": "^3.2.3",
-    "parcel": "^2.4.0"
+    "parcel": "^2.4.1"
   }
 }
