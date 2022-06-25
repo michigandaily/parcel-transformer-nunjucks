@@ -1,5 +1,6 @@
-# Test output
+# Output
 test/dist/
+dist/
 
 # Logs
 logs
