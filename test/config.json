@@ -3,5 +3,12 @@
   "dek": "This is a short description",
   "byline": "Firstname Lastname",
   "source": "Source: This is the source",
-  "deployment": "https://datagraphics.michigandaily.com"
+  "deployment": "https://michigandaily.github.io",
+  "fetch": [
+    {
+      "id": "fake-id",
+      "output": "./copy.json",
+      "auth": "./auth.json"
+    }
+  ]
 }
