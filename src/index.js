@@ -10,9 +10,9 @@ export default new Transformer({
     const confaml = contents?.fetch?.filter(
       (d) => !d.hasOwnProperty("sheetId")
     );
-    if (confaml.length === 1) {
+    if (confaml?.length === 1) {
       archie = (await config.getConfig([confaml[0].output]))?.contents;
-    } else if (confaml.length > 1) {
+    } else if (confaml?.length > 1) {
       archie = await Promise.all(
         confaml.map(
           async (aml) => (await config.getConfig([aml.output]))?.contents

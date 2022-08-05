@@ -22,10 +22,10 @@ var $f7f4a66df2960fae$export$2e2bcd8739ae039 = new (0, $4BP8v$parcelplugin.Trans
         // find archie files to insert
         let archie = null;
         const confaml = contents?.fetch?.filter((d)=>!d.hasOwnProperty("sheetId"));
-        if (confaml.length === 1) archie = (await config.getConfig([
+        if (confaml?.length === 1) archie = (await config.getConfig([
             confaml[0].output
         ]))?.contents;
-        else if (confaml.length > 1) archie = await Promise.all(confaml.map(async (aml)=>(await config.getConfig([
+        else if (confaml?.length > 1) archie = await Promise.all(confaml.map(async (aml)=>(await config.getConfig([
                 aml.output
             ]))?.contents));
         return {
