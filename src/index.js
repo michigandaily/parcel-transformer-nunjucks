@@ -7,12 +7,17 @@ export default new Transformer({
     const { contents } = await config.getConfig(["config.json"]);
     // find archie files to insert
     let archie = null;
-    const confaml = contents.fetch.filter(d => !d.hasOwnProperty("sheetId"));
-    if (confaml.length === 1) {
+    const confaml = contents?.fetch?.filter(
+      (d) => !d.hasOwnProperty("sheetId")
+    );
+    if (confaml?.length === 1) {
       archie = (await config.getConfig([confaml[0].output]))?.contents;
-    }
-    else if (confaml.length > 1) {
-      archie = await Promise.all(confaml.map(async aml => (await config.getConfig([aml.output]))?.contents));
+    } else if (confaml?.length > 1) {
+      archie = await Promise.all(
+        confaml.map(
+          async (aml) => (await config.getConfig([aml.output]))?.contents
+        )
+      );
     }
 
     return {
@@ -22,10 +27,10 @@ export default new Transformer({
     };
   },
   async transform({ asset, config }) {
-    configure({ autoescape: false })
+    configure({ autoescape: false });
     let code = await asset.getCode();
-    let result = renderString(code, config)
-    asset.setCode(result)
+    let result = renderString(code, config);
+    asset.setCode(result);
     return [asset];
   },
 });
