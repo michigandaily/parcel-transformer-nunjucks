@@ -7,8 +7,9 @@ export default new Transformer({
     const { contents } = await config.getConfig(["config.json"]);
 
     // find archie files to insert
-    const confaml = contents.fetch.filter(
-      d => !d.hasOwnProperty("sheetId") && d.id.length > 0 && d.output.length > 0
+    const confaml = contents?.fetch?.filter(
+      (d) =>
+        !d.hasOwnProperty("sheetId") && d.id.length > 0 && d.output.length > 0
     );
 
     let archie = null;
