@@ -1,5 +1,6 @@
 var $4BP8v$parcelplugin = require("@parcel/plugin");
 var $4BP8v$nunjucks = require("nunjucks");
+var $4BP8v$path = require("path");
 
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
@@ -11,6 +12,7 @@ function $parcel$export(e, n, v, s) {
 $parcel$defineInteropFlag(module.exports);
 
 $parcel$export(module.exports, "default", () => $f7f4a66df2960fae$export$2e2bcd8739ae039);
+
 
 
 var $f7f4a66df2960fae$export$2e2bcd8739ae039 = new (0, $4BP8v$parcelplugin.Transformer)({
@@ -39,7 +41,10 @@ var $f7f4a66df2960fae$export$2e2bcd8739ae039 = new (0, $4BP8v$parcelplugin.Trans
             autoescape: false
         });
         let code = await asset.getCode();
-        let result = (0, $4BP8v$nunjucks.renderString)(code, config);
+        let result = (0, $4BP8v$nunjucks.renderString)(code, {
+            ...config,
+            file: (0, $4BP8v$path.basename)(asset.filePath)
+        });
         asset.setCode(result);
         return [
             asset
