@@ -32,7 +32,7 @@ export default new Transformer({
     let code = await asset.getCode();
     let result = renderString(code, {
       ...config,
-      file: basename(asset.filePath),
+      filename: basename(asset.filePath),
     });
     asset.setCode(result);
     return [asset];
