@@ -1,6 +1,6 @@
+var $4BP8v$path = require("path");
 var $4BP8v$parcelplugin = require("@parcel/plugin");
 var $4BP8v$nunjucks = require("nunjucks");
-var $4BP8v$path = require("path");
 
 function $parcel$defineInteropFlag(a) {
   Object.defineProperty(a, '__esModule', {value: true, configurable: true});
@@ -23,7 +23,7 @@ var $f7f4a66df2960fae$export$2e2bcd8739ae039 = new (0, $4BP8v$parcelplugin.Trans
         ]);
         // find archie files to insert
         let archie = null;
-        const confaml = contents?.fetch?.filter((d)=>!d.hasOwnProperty("sheetId"));
+        const confaml = contents?.fetch?.filter((d)=>!Object.hasOwn(d, "sheetId"));
         if (confaml?.length === 1) archie = (await config.getConfig([
             confaml[0].output
         ]))?.contents;
