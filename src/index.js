@@ -9,7 +9,7 @@ export default new Transformer({
     // find archie files to insert
     let archie = null;
     const confaml = contents?.fetch?.filter(
-      (d) => !d.hasOwnProperty("sheetId")
+      (d) => !Object.hasOwn(d, "sheetId")
     );
     if (confaml?.length === 1) {
       archie = (await config.getConfig([confaml[0].output]))?.contents;
