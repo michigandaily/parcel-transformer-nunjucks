@@ -1,7 +1,7 @@
 {
   "name": "@michigandaily/parcel-transformer-nunjucks",
   "repository": "https://github.com/MichiganDaily/parcel-transformer-nunjucks",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "author": {
     "name": "Naitian Zhou"
   },
