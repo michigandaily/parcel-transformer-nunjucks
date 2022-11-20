@@ -6,6 +6,7 @@
   "deployment": "https://michigandaily.github.io",
   "fetch": [
     {
+      "type": "doc",
       "id": "fake-id",
       "output": "./copy.json",
       "auth": "./auth.json"

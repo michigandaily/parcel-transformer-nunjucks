@@ -1,4 +1,4 @@
-import { basename } from "path";
+import { basename, extname } from "node:path";
 import { Transformer } from "@parcel/plugin";
 import { renderString, configure } from "nunjucks";
 
@@ -8,9 +8,7 @@ export default new Transformer({
     const { contents } = await config.getConfig(["config.json"]);
     // find archie files to insert
     let archie = null;
-    const confaml = contents?.fetch?.filter(
-      (d) => !Object.hasOwn(d, "sheetId")
-    );
+    const confaml = contents?.fetch?.filter(d => extname(d.output) === ".json");
     if (confaml?.length === 1) {
       archie = (await config.getConfig([confaml[0].output]))?.contents;
     } else if (confaml?.length > 1) {
