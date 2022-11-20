@@ -106,7 +106,7 @@
   integrity sha512-zrBczSbXKxEyK2ijtbRdICDygRqWSRPpZMN5dD1T8VMEW5RIhIbwFWw2phDRXuBQdVDpSjalCIUMWMV2h3JaZA==
 
 "@michigandaily/parcel-transformer-nunjucks@file:..":
-  version "2.2.4"
+  version "2.2.5"
   dependencies:
     "@parcel/core" "~2.8.0"
     "@parcel/plugin" "~2.8.0"
