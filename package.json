@@ -20,6 +20,6 @@
   "dependencies": {
     "@parcel/core": "~2.8.0",
     "@parcel/plugin": "~2.8.0",
-    "nunjucks": "^3.2.3"
+    "nunjucks": "^3.2.4"
   }
 }
