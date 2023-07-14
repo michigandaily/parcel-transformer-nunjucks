@@ -1,6 +1,7 @@
 import { basename, extname } from "node:path";
+
 import { Transformer } from "@parcel/plugin";
-import { renderString, configure } from "nunjucks";
+import nunjucks from "nunjucks";
 
 export default new Transformer({
   async loadConfig({ config }) {
@@ -26,9 +27,9 @@ export default new Transformer({
     };
   },
   async transform({ asset, config }) {
-    configure({ autoescape: false });
+    nunjucks.configure({ autoescape: false });
     let code = await asset.getCode();
-    let result = renderString(code, {
+    let result = nunjucks.renderString(code, {
       ...config,
       filename: basename(asset.filePath),
     });
